@@ -1,9 +1,6 @@
 import React from 'react'
-// eslint-disable-next-line
 import { NavLink, Routes, Route, Navigate, useRoutes } from 'react-router-dom'
-// eslint-disable-next-line
 import About from './pages/About'
-// eslint-disable-next-line
 import Home from './pages/Home'
 import Header from './components/Header'
 import routes from './routes'
@@ -30,9 +27,10 @@ export default function App() {
             {/* v5有activeClassName,v6弃用了 className动态active类名添加 */}
             {/* <NavLink className={({ isActive }) => isActive ? 'list-group-item pageBg' : 'list-group-item'} to="/about">About</NavLink> */}
             {/* 动态active类名添加简写方式 定义一个func */}
-            <NavLink className={computedClassName} to="/about">About</NavLink>
+            
 
             <NavLink className={({ isActive }) => isActive ? 'list-group-item pageBg' : 'list-group-item'} to="/home">Home</NavLink>
+            <NavLink className={computedClassName} to="/about">About</NavLink>
 
             {/* 路由链接 */}
             {/* <NavLink className="list-group-item" to="/about">about</NavLink>
