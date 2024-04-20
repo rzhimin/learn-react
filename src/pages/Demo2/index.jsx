@@ -22,6 +22,7 @@ export default function Demo2() {
 	//组件挂载后请求商品数据
 	useEffect(() => {
 		dispatch(productListGet());
+		// eslint-disable-next-line
 	}, []);
 
 	return (

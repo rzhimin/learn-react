@@ -13,8 +13,7 @@ module.exports = {
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react/recommended",
-		"plugin:react-hooks/recommended",
-		"prettier"
+		"plugin:react-hooks/recommended"
 	],
 	overrides: [
 		{
@@ -32,7 +31,7 @@ module.exports = {
 		ecmaVersion: "latest",
 		sourceType: "module"
 	},
-	plugins: ["@typescript-eslint", "react", "prettier"],
+	plugins: ["@typescript-eslint", "react"],
 	rules: {
 		"react/prop-types": "off",
 		"react/react-in-jsx-scope": "off",
