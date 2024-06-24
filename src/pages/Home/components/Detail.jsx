@@ -23,7 +23,7 @@ export default function Detail() {
 	const {
 		state: { id, title, content }
 	} = useLocation();
-
+	
 	return (
 		<ul>
 			{/* <li>
