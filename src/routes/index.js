@@ -1,10 +1,10 @@
 import React,{ lazy } from 'react'
 import { Navigate } from "react-router-dom";
-const Redux_test = lazy(() => import("../pages/Redux_test"));
 const Home = lazy(() => import("../pages/Home"));
 const News = lazy(() => import("../pages/Home/components/News"));
 const Message = lazy(() => import("../pages/Home/components/Message"));
 const Detail = lazy(() => import("../pages/Home/components/Detail"));
+const Redux_test = lazy(() => import("../pages/Redux_test"));
 const Demo1 = lazy(() => import("../pages/Demo1"));
 const Demo2 = lazy(() => import("../pages/Demo2"));
 

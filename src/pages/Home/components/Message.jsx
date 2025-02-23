@@ -31,11 +31,11 @@ export default function Message() {
 					return (
 						// 路由链接
 						<li key={m.id}>
-						{/* 使用params参数传递，routes文件里需要占位 */}
+							{/* 使用params参数传递，routes文件里需要占位 */}
 							{/* <Link to={`detail/${m.id}/${m.title}/${m.content}`}>{m.title}</Link> */}
-						{/* 使用search参数传递，routes文件里不需要占位 */}
+							{/* 使用search参数传递，routes文件里不需要占位 */}
 							{/* <Link to={`detail?id=${m.id}&title=${m.title}&content=${m.content}`}>{m.title}</Link> */}
-						{/* 使用state参数传递，routes文件里不需要占位 */}
+							{/* 使用state参数传递，routes文件里不需要占位 */}
 							<Link
 								to="detail"
 								state={{
