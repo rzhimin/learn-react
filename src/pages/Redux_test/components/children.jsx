@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectList } from "../../../redux/modules/productSlice";
+
 function ProductChild() {
 	/**
 	 * 如果要使用selector里面的数据

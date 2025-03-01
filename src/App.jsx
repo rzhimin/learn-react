@@ -29,16 +29,13 @@ export default function App() {
 						<NavLink className="list-group-item" end to="/home">
 							Home
 						</NavLink>
-						<NavLink className="list-group-item" to="/redux_test">
-							redux_test
-						</NavLink>
 						{/* v5有activeClassName,v6弃用了 */}
 						{/* 1.className用动态active类名添加 */}
 						<NavLink
 							className={({ isActive }) => (isActive ? "list-group-item buttnActiceClass" : "list-group-item")}
-							to="/demo1"
+							to="/redux_test"
 						>
-							Demo1
+							redux_test
 						</NavLink>
 						{/* 2.定义一个func */}
 						<NavLink className={computedClassName} to="/demo2">

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigationType, useResolvedPath } from "react-router-dom";
+import { useNavigationType, useResolvedPath, useInRouterContext } from "react-router-dom";
 
 export default function News() {
 	return (
@@ -9,6 +9,8 @@ export default function News() {
 			<li>当前导航类型：{useNavigationType()}</li>
 			<li>useResolvedPath--给定一个url,解析其中的path/search/hash值</li>
 			<li>解析/user?id=001&name=tom#qwe的结果:{JSON.stringify(useResolvedPath("/user?id=001&name=tom#qwe"))}</li>
+			<li>useInRouterContext--判断当前组件是否处于路由上下文</li>
+			<li>结果:{useInRouterContext() ? "true" : "false"}</li>
 			<li>news001</li>
 			<li>news002</li>
 			<li>news003</li>

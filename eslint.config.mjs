@@ -12,8 +12,19 @@ export default [
   pluginReactConfig,
   {
     rules: {
-      'no-unused-vars': 'warn', // 自定义规则
-      'react/react-in-jsx-scope': 'off' // 覆盖 React 插件的规则
+      'react/react-in-jsx-scope': 'off', // 覆盖 React 插件的规则
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "react/display-name": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/no-var-requires": "off"
     }
-  }
+  },
+  {
+    "env": {
+        "commonjs": true
+    }
+}
 ];

@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk, createSelector } from "@reduxjs/toolkit"
 //list表示商品列表，isLoading表示是否为正在请求数据的状态
 const initialState = { list: [], isLoading: false };
 //创建slice
-const slice = createSlice({
+const ProductSlice = createSlice({
 	//定义域名称
 	name: "product",
 	//传入初始state
@@ -19,7 +19,8 @@ const slice = createSlice({
 			state.isLoading = action.payload;
 		}
 	},
-	//extraReducer设置createAsyncThunk创建的thunk被dispatch后的reducer处理器
+	// 设置createAsyncThunk创建的thunk被dispatch后的reducer处理器
+	// 用于处理由 createAsyncThunk 创建的异步 action 的不同状态（pending、fulfilled、rejected）
 	extraReducers(builder) {
 		builder
 			.addCase(addProductPost.pending, (state, action) => {
@@ -28,6 +29,9 @@ const slice = createSlice({
 			.addCase(addProductPost.fulfilled, (state, action) => {
 				state.isLoading = false;
 				state.list.push(action.payload);
+			})
+			.addCase(addProductPost.rejected, (state, action) => {
+				state.isLoading = false;
 			})
 			.addCase(productListGet.pending, (state, action) => {
 				state.isLoading = true;
@@ -40,9 +44,11 @@ const slice = createSlice({
 			});
 	}
 });
+
 //导出action creator
-export const { addProduct, changeState } = slice.actions;
-//导出thunk函数
+export const { addProduct, changeState } = ProductSlice.actions;
+
+//手动创建的thunk函数
 //addProductAsync为thunk函数的创建函数，它返回一个thunk函数
 //返回的thunk函数中我们就可以编写异步代码了
 export const addProductAsync = payload => (dispatch, getState) => {
@@ -97,4 +103,4 @@ export const selectList = createSelector(
 );
 
 //导出reducer
-export default slice.reducer;
+export default ProductSlice.reducer;

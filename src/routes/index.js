@@ -5,8 +5,6 @@ const News = lazy(() => import("../pages/Home/components/News"));
 const Message = lazy(() => import("../pages/Home/components/Message"));
 const Detail = lazy(() => import("../pages/Home/components/Detail"));
 const Redux_test = lazy(() => import("../pages/Redux_test"));
-const Demo1 = lazy(() => import("../pages/Demo1"));
-const Demo2 = lazy(() => import("../pages/Demo2"));
 
 const routes = [
 	{
@@ -35,14 +33,6 @@ const routes = [
 	{
 		path: "/redux_test",
 		element: <Redux_test />
-	},
-	{
-		path: "/demo1",
-		element: <Demo1 />
-	},
-	{
-		path: "/demo2",
-		element: <Demo2 />
 	},
 	{
 		path: "/",
