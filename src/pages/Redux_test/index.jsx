@@ -34,7 +34,7 @@ export default function Redux_test() {
 	//组件挂载后请求商品数据
 	useEffect(() => {
 		dispatch(productListGet());
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<>

@@ -38,8 +38,8 @@ export default function App() {
 							redux_test
 						</NavLink>
 						{/* 2.定义一个func */}
-						<NavLink className={computedClassName} to="/demo2">
-							Demo2
+						<NavLink className={computedClassName} to="/tinymce">
+							Tinymce
 						</NavLink>
 					</div>
 				</div>
